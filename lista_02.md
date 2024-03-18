@@ -48,7 +48,7 @@ C) O código avalia a expressão booleana, imprime o resultado `true` e verifica
 
 D) O código avalia a expressão booleana, imprime o resultado `false` e ordena a lista de números em ordem crescente.
 
-
+**Reposta: B) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.**
 ______
 
 **2)** Analise as funções calcularOrcamento() e calcularOrcamento2(). Num cenário em que a lista gastos fosse incializada como var gastos = [3600, 950, 620, 38] em ambas funções.
@@ -112,7 +112,7 @@ C) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -100.' e a d
 
 D) As funções calcularOrcamento() e calcularOrcamento2() teriam a mesma saída: 'Seu saldo é negativo de -100.'
 
-______
+**Resposta: B) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'**
 
 **3)** Considere o seguinte trecho de código em JavaScript:
 ```javascript
@@ -139,7 +139,7 @@ C) O código verifica se o número é par e se é divisível por 3. Se for par, 
 
 D) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for ímpar, exibe a mensagem "O número é ímpar!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!".
 
-
+**Resposta: D) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for ímpar, exibe a mensagem "O número é ímpar!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!".**
 ______
 
 **4)** Qual será o resultado impresso no console após a execução desse código?
@@ -213,7 +213,13 @@ Compra 4 aprovada. Saldo restante: 0
 
 Compra 5 negada. Saldo insuficiente e limite de crédito excedido.
 
-______
+**Resposta:**
+**Compra 2 aprovada. Saldo restante: 0**
+**Compra 1 aprovada. Saldo restante: 800**
+**Compra 3 aprovada com limite de crédito. Saldo restante: 200**
+**Compra 4 negada. Saldo insuficiente e limite de crédito excedido.**
+**Compra 5 negada. Saldo insuficiente e limite de crédito excedido.**
+
 
 **5)** Qual é o principal ciclo de vida de um jogo em Phaser.js?
 
@@ -226,7 +232,8 @@ B) Preload -> Create -> Update
 C) Load -> Initialize -> Render
 
 D) Begin -> Play -> End
-______
+
+**Resposta: B) Preload -> Create -> Update**
 
 **6)** Qual é o objetivo principal do módulo Arcade Physics em Phaser.js?
 
@@ -240,13 +247,30 @@ C) Criar efeitos de áudio para melhorar a experiência do usuário em jogos.
 
 D) Gerenciar a lógica do jogo e a sincronização de eventos em jogos multiplayer.
 
-______
+**Resposta: B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.**
 
 # Questões dissertativas
 
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
 ![Uma imagem](assets/image.png)
-______
+**Resposta**:
+``` javascript
+botao = document.getElementById("start");
+
+botao.onclick = function() {
+    let idade = prompt("Digite a sua idade: ");
+    
+    if (idade < 16) {
+        alert("Você não pode votar.");
+    } else if (idade >= 16 && idade < 18) {
+        alert("Seu voto é opcional.");
+    } else {
+        alert("Seu voto é obrigatório.");
+    }
+}
+
+
+```
 
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
 
@@ -263,10 +287,69 @@ Classe FormaGeometrica:
 
 ```
 
-______
+**Resposta:**
+```
+Classe FormaGeometrica:
+    Atributos:
+        - cor
+
+    Método Construtor(cor):
+        Define o valor do atributo cor com o valor passado como parâmetro.
+
+    Método CalcularArea():
+        # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
+    
+Classe Quadrado herda de FormaGeometrica:
+    Atributos:
+        - cor
+        - lado
+    
+    Método Construtor(cor, lado):
+        herda cor de classe-pai
+        define o atributo lado como o valor passado no parâmetro lado
+    
+    Método CalcularArea():
+        retorna lado * lado
+
+Classe Circulo herda de FormaGeometrica:
+    Atributos:
+        - cor
+        - raio
+    
+    Método Construtor(cor, raio):
+        herda cor de classe-pai
+        define o atributo raio como o valor passado no parâmetro raio
+    
+    Método CalcularArea():
+        retorna pi * raio * raio
+
+
+```
 
 **9)** Você foi contratado(a) como estagiário(a) da Tesla e está participando do desenvolvimento de um programa para simular o desempenho de um carro elétrico em uma corrida. Seu objetivo é determinar em quantos minutos o carro levará para completar uma determinada distância, levando em consideração uma velocidade inicial e uma taxa de aceleração constante. No entanto, você deseja garantir que o carro não exceda uma velocidade máxima nem que a corrida demore mais do que um tempo máximo. Implemente a lógica dessa simulação em pseudocódigo.
 
+
+**Resposta:**   
+```
+Função simularCorrida(distancia, velocidadeInicial, aceleracao, velocidadeMaxima, tempoMaximo):
+    tempo = 0
+    velocidade = velocidadeInicial
+
+    Enquanto tempo for menor ou igual a tempoMaximo:
+        Se velocidade for menor que velocidadeMaxima:
+            velocidade <- velocidade + aceleracao * tempo
+            Se velocidade for maior que velocidadeMaxima:
+                velocidade = velocidadeMaxima
+        tempo <- tempo + 1
+
+        distanciaRestante = distancia - (velocidade * tempo)
+
+        Se distancia restante for menor ou igual a 0:
+            retorne tempo
+        
+    retorne "Não completou no tempo máximo"
+
+```
 
 
 ______
@@ -297,4 +380,25 @@ matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
 matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
+```
+
+**Resposta:**
+```
+Função MultiplicaMatrizes(matrizA, matrizB):
+    linhasA <- tamanho(matrizA)
+    colunasA <- tamanho(matrizA[0])
+    linhasB <- tamanho(matrizB)
+    colunasB <- tamanho(matrizB[0])
+
+    Se colunasA ≠ linhasB:
+        return "Não é possível multiplicar que possuem qtd de linhas e colunas diferentes"
+    
+    resultado <- Array(linhasA) # Matriz resultado de tamanho igual a linhasA
+
+    para i de 0 até linhasA - 1:
+        para j de 0 até colunasB - 1:
+            para k de 0 até colunasA - 1:
+                resultado[i][j] <- matrizA[i][k] * matrizB[k][j]
+
+    retorna resultado 
 ```
