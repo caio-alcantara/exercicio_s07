@@ -252,8 +252,20 @@ D) Gerenciar a lógica do jogo e a sincronização de eventos em jogos multiplay
 # Questões dissertativas
 
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
-![Uma imagem](assets/image.png)
+![Uma imagem](assets/image.png) <br
+>
 **Resposta**:
+```
+var idade <- input idade
+SE idade < 16:
+    escreva "Você não pode votar"
+SENÃO SE idade >= 16 E idade < 18:
+    escreva "Voto opcional"
+SENÃO:
+    escreva "Voto obrigatório"
+```
+
+
 ``` javascript
 botao = document.getElementById("start");
 
